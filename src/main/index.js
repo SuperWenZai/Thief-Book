@@ -182,6 +182,8 @@ function createWindownSetting() {
         webContents.setLayoutZoomLevelLimits(0, 0);
     })
 
+    // settingWindow.webContents.openDevTools(); //创建openDevTools 调试
+
     settingWindow.loadURL(settingURL)
 
     settingWindow.on('closed', () => {
@@ -353,7 +355,7 @@ function AutoStock() {
             stock.getData(display_shares_list, function(text) {
                 updateText(text);
             })
-        }, parseInt(5) * 1000);
+        }, parseInt(2) * 1000);
     } else {
         clearInterval(autoStockTime);
     }
