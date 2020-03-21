@@ -822,7 +822,7 @@ function createTray() {
 }
 
 function createSetting() {
-    if (isMac) {
+    if (isMac && process.env.NODE_ENV !== 'development') {
         app.dock.hide();
     } else {
         // 
